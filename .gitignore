@@ -1,0 +1,5 @@
+# 🔐 Environment variables
+.env
+
+# 🧪 Python virtual environment
+penv/
