@@ -3,3 +3,7 @@
 
 # 🧪 Python virtual environment
 penv/
+
+# .gitignore
+
+.streamlit/secrets.toml
