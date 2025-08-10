@@ -1,0 +1,40 @@
+#from db.progress import get_all_scores
+from db.progress import get_all_scores 
+from utils.file_ops import export_csv, export_pdf 
+import streamlit as st
+import pandas as pd
+import altair as alt
+
+# Add below the chart and dataframe
+st.subheader("📤 Export Reports")
+
+csv_data = export_csv(df)
+st.download_button("Download CSV", csv_data, file_name="quiz_scores.csv", mime="text/csv")
+
+pdf_data = export_pdf(df)
+st.download_button("Download PDF", pdf_data, file_name="quiz_scores.pdf", mime="application/pdf")
+
+
+def teacher_analytics():
+    st.header("📈 Class-Wide Quiz Analytics")
+
+    all_scores = get_all_scores()
+    if not all_scores:
+        st.info("No quiz data available.")
+        return
+
+    df = pd.DataFrame(all_scores)
+    avg_scores = df.groupby("topic")["score"].mean().reset_index()
+
+    chart = alt.Chart(avg_scores).mark_bar().encode(
+        x="topic",
+        y="score",
+        tooltip=["topic", "score"]
+    ).properties(title="📊 Average Scores by Topic")
+
+    st.altair_chart(chart, use_container_width=True)
+
+    st.subheader("📋 Raw Data")
+    st.dataframe(df)
+    
+    

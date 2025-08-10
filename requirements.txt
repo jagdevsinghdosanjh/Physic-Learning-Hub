@@ -1,0 +1,24 @@
+# === Core UI Framework ===
+streamlit==1.33.0         # Interactive dashboards, forms, charts
+
+# === Database Integration ===
+pymongo==4.6.1            # MongoDB client for storing user data, quizzes, progress
+
+# === Authentication & Security (Future-Ready) ===
+bcrypt==4.1.2             # Secure password hashing
+PyJWT==2.8.0              # JSON Web Token support for login/session management
+
+# === Data Analysis & Visualization ===
+matplotlib==3.8.4         # Static plotting (optional; altair preferred)
+altair==5.2.0             # Interactive charts for analytics and leaderboards
+numpy==1.26.4             # Numerical operations (XP, streaks, etc.)
+pandas==2.2.2             # Data manipulation, tabular views, calendar logic
+
+# === Content Rendering ===
+markdown==3.6             # Markdown support for rich text in quizzes, dashboards
+
+# === PDF Generation ===
+fpdf                      # Lightweight PDF export for reports and analytics
+
+# === PYTHON-DOTENV ===
+python-dotenv
