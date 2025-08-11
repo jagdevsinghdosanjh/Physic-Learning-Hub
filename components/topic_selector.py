@@ -16,7 +16,7 @@ TOPIC_ICONS = {
 # 🧪 Static Topic Mapping
 STATIC_TOPICS = {
     "Physical World": "physicalworld",
-    "Units & Measurements": "",
+    "Units & Measurements": "unitsandmeasurements",
     "Kinematics": "kinematics",
     "Laws of Motion": "lawsofmotion",
     "Work, Energy and Power": "workenergyandpower",

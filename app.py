@@ -1,6 +1,6 @@
 import streamlit as st
 from components.topic_selector import select_topic
-from utils import topic_module
+from utils import topic_module # noqa
 from utils.db import get_db_connection
 from teacher_tools.content_browser import content_browser
 
